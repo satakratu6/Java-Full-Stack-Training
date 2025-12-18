@@ -1,0 +1,51 @@
+code -> compiler -> byte code -> JVM (JIT+Interpreter) -> Binary code
+JRE -> Inbuilt Libraries + JVM
+JDK -> Development tools + JRE
+Java is a high level programming language which is easily readable, understandable and instructable by programmer. Java is a platform independent language because in Java Source code is converted into byte code which is easily executable in any platform which has JVM.
+JVM stands for Java Virtual Machine. It is physically doesn't exist. It is used to convert byte code into binary code. It consists of JIT and Interpreter. 
+JRE-> Java Runtime Environment -> Physically exists. Its used to provide the environment to run the java programme. 
+JDK-> It stands for JDK. It is physically exists. It provides an environment to run as well as to develop the java program. 
+System.out.print-> After printing the data the cursor is shifted to next position in same line 
+System.out.println -> After printing the data the cursor is shifted to next position in new line
+Tokens -> The smallest part of java progam is known as tokens.
+Four types of Tokens:
+1) keywords -> 50+, compiler aware words, always in lower case (its predifined) . eg: class, public, static, void etc.
+2) identifiers -> class name, variable name, package name, package name. The name given by progammer is known as identifier. 
+Some rules : 
+a) We can't use keywords as identifiers
+b) We can't use space 
+c) Can't start with numbers
+d) We can't use special characters except _ and $ 
+3) Literals: The value or data given by programmer is known as literals.
+Types of Literals
+a)Numbers:  10-> Integer number
+            10.o -> Floating Numbers
+b)characters:   It is used to represent a single data. It is enclosed in inside single qoute. Length of characters is always one. We can use uppercase characters, lowercase characters, digits, and all type of special characters
+c) String:  It is used to represent group of characters. It is enclosed in inside double qoutes. The Length of string literal can be anything. 
+d) Boolean: Boolean gives us only two values, either true or false
+4) Seperators: Is used to seperate java memebers
+{} -> blocks
+() -> equations, method declarations, conditions
+; -> end of the statements
+, -> variables
+. -> reference
+
+Data Types: It is used to define what type of data we are storing in any variable
+a)Primitive Datatype:
+Inbuilt datatype, fixed size
+Integer number: 
+            types   size    in bits
+            byte    1 byte  8 bits
+            short   2 byte  16 bits
+            int     4 byte  32 bits
+            long    8 byte  64 bits
+Floating numbers:
+            Float   4 bytes 32 bits
+            double  8 byte  64 bits
+characters:
+            char    2 byte  16 bits
+bool:
+            bool    1 bit
+b)Non-primitive datatype:
+->Does not have fixed size
+-> User defined size, eg: String
