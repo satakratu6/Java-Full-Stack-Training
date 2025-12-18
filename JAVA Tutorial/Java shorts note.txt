@@ -49,3 +49,20 @@ bool:
 b)Non-primitive datatype:
 ->Does not have fixed size
 -> User defined size, eg: String
+Variables:
+Types of variables:
+1) Based on datatypes: primitive variables and non-primitive variables
+2) Based on Scope : 
+    a) Global Variable -> Declared inside a class, it has two types: static variable and non-static variable
+    b) Local Variable -> Declared in a local area or a method 
+Static variable: A variable which is declared inside the class area or global area prefixed with static keyword is known as static keyword
+Non- Static variable: A variable which is declared inside the class area or global area prefixed without static keyword is known as non static keyword
+Points
+1)We can't use local variables without initilization
+2)Local Varibables are not assigned with default value
+3) We can't create two local variables with same name
+4)Local variablea can be used only inside same local area
+5) We can use global variables inside global areas as well as local areas
+Q1) Area of Sqaure whose side is 4.2
+Q2)Area of circle whose radius is 5
+Q3) Area of rectangle whose length is 3.5 and breadth is 4
