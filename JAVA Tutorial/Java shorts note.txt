@@ -66,3 +66,42 @@ Points
 Q1) Area of Sqaure whose side is 4.2
 Q2)Area of circle whose radius is 5
 Q3) Area of rectangle whose length is 3.5 and breadth is 4
+4)Operators:
+Three Types:
+    a) Unary Operator: 
+        i)new, ii)increment operator, iii)Decrement operator, iv) Logical Not operator
+                1)Pre Increment         1)Pre Decrement
+                2)Post increment        2)Post Decrement
+    b) Binary Operator :
+        i)Arithmetic Operator, ii)Relationl Operator, iii) Logical AND Operator, iv) Logical OR Operator
+    c) Ternary Operator: Conditional Operator
+
+Increment operator:
+    1)Pre-increment: 
+        a)increase the value by 1
+        b)Update the incremented value in same variable
+        c)If any operation is going on, will have to use the incremented value
+write a difference between primitive and non primitive
+-> primitive is a fixed sized, predefined  while non primitive is not fixed size, the size is given by user. eg: int, float is primitive and string, array is non primitive
+write a difference between local and global variable
+->local variable is declared inside a method or local area. It doesn't have access outside that area. While global variable is declared inside a class. It can be accesseble through the whole class.
+Diff b/w compiler and Interpreter
+Compiler translates the whole program into machine code for faster execution while Interpreter execudes code line by line making it slower than compiler but is useful in cases of debugging and testing
+Compiler convert the program into byte code.
+
+Difference between platform dependent and independent
+Platform-dependent software runs only on specific operating systems/hardware (like C/C++ compiled to native code), while platform-independent software runs anywhere via an intermediary like a Virtual Machine (JVM for Java), allowing "write once, run anywhere" for Java, Python, etc., by compiling to intermediate bytecode/P-code that a specific platform's interpreter handles. The key difference is portability
+
+How does Object Oriented Nature of Java helps in software Development
+structures software around objects rather than actions or logic, offering several key advantages for software development .
+Why Java is considered simple language compare c/c++
+-> Java is considered a simpler language than c/c++ because of its portability.  it abstracts away complex, low-level tasks like manual memory management and direct pointer manipulation, allowing developers to focus more on application logic. It also allocate memory automaticallu while in c++ we have to allocate manually
+How does Java provide security and Runtime
+-> Java provides security through a multi-layered architecture involving built-in language features and a robust runtime environment (JRE), which includes the Java Virtual Machine (JVM). This system creates a secure "sandbox" for executing code and provides extensive security APIs for developers. 
+what makes java as robust language
+emphasize early error detection, effective error management, and reliable memory handling, which collectively promote application stability and resilience
+How does Java achieve high performance
+-> Java achieves high performance primarily through the advanced optimizations within the Java Virtual Machine (JVM), especially its Just-In-Time (JIT) compiler and sophisticated garbage collection mechanisms. 
+What do you mean by portability in Java ?
+-> Portability in Java means it can run on any platform as it is platform independent language. Doesn't need any particular configuration. Just have to have the JVM so that it converts the byte code into machine readable code.
+Why does Java have strong industry adoption and job opportunities 

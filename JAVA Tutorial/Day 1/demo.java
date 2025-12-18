@@ -25,6 +25,11 @@ class demo{
         System.out.println(55);
         System.out.print(66+" ");
         System.out.print(67);
-        
+        int a=10;
+        --a;
+        int b=--a + ++a + a;
+        int c=a++ - ++b - --a - a;
+        a=c-- + --b - c++ + c;
+        System.out.println(a+" "+b+" "+c);
     }
 }
