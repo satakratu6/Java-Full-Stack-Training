@@ -3,6 +3,7 @@
 public class Question1 {
     public static void main(String[] args) {
         char ch='X';
-        System.out.println((ch>='A' && ch<='Z')?"Uppercase":"lowercase");
+        String res=(ch>='A' && ch<='Z')?"Uppercase":"lowercase";
+        System.out.println(res);
     }
 }
