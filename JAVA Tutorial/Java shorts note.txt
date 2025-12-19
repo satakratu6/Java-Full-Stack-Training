@@ -105,3 +105,10 @@ How does Java achieve high performance
 What do you mean by portability in Java ?
 -> Portability in Java means it can run on any platform as it is platform independent language. Doesn't need any particular configuration. Just have to have the JVM so that it converts the byte code into machine readable code.
 Why does Java have strong industry adoption and job opportunities 
+
+Operators:
+Byte + Byte = Compile Time Error
+short + short = Compile Time Error
+char + char = Compiler Time Error
+Numeric values/char => <,>,<=.>=,==,!=
+string and Boolean => ==,!=
