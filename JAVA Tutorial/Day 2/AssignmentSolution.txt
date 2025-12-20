@@ -1,0 +1,19 @@
+Q1) Stock Availability:
+I will use greater than relational operator
+Q2) Quantity Limit:
+Less than equals to
+Q3) Free Delivery Rule:
+Greater than equal to . If it is 499 rs exactly, then there will be free Delivery
+Q4)Discount Eligibility:
+Greater than. 
+Q5) Coupon Expiry Validation:
+Less than . We can't use equality check as the question demands that the current date should be before expiry date
+Q6)Price Drop Notification:
+Less than.
+Q7)Payment Verification:
+Equal to. Because the payment can't be always made on floating. 
+Q8) Fraud Detection Check:
+Greater than
+Q9)Return Policy Validation:
+First we will have to derive the difference b/w the current date and date of delivery. If the difference is less than equal to 7, it can be returned. So we should use less than equal to 7
+10)

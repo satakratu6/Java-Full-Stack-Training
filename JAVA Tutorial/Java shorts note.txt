@@ -112,3 +112,61 @@ short + short = Compile Time Error
 char + char = Compiler Time Error
 Numeric values/char => <,>,<=.>=,==,!=
 string and Boolean => ==,!=
+
+
+
+
+Q4)A customer gets a discount if they are a premium member or if their cart value exceeds $5000 during a smallest->Identify the logical condition
+
+Q7)An online order is confirmed only when payment is succesfull and either stock is available or backorder is allowed
+
+Q8)A job applicant is eligible for interview if they have at least 2 years of experience or strong project experience, 
+but they must hace completed graduation
+
+Q9)A system should send an alert if login attempts exceed 3 and the account is not locked
+
+Q10)A movie ticket booking is allowed if seats are available and the user has either a membership or a valid promo code
+
+Q11) a bank transction is permitted only if the account balance is sufficient and the account is active and not frozen
+
+Q12) A candidate clears a coding test if they pass the logic round and the coding round, or if they have a strong referral
+
+
+Q13)A mobile app feature is enabled if the user is logged in and has accepted terms and conditions
+
+Q14)A system backup runs only when it is midnight and the server load is low or the sytsem is in maintenance mode
+
+Q15)A student qualified for placement if they have no active backlogs and either a minimum CGPA or internship experience
+
+TypeCasting:
+2 Types:
+1) Primitive Typecasting - Not Reccomended -> DataTypes
+2) Non Primitive Typecasting - Highly Reccomended -> Class
+1) Primitive Typecasting : 2 Types:
+i)Widening (Implicit)
+ii) Narrowing (explicit)
+i)Widening: Implicitly converting by compiler
+byte<short(char)<int<long<float<double
+value to char is not possible (Implicitly)
+ii)Narrowing: Converting longer range data types into shorter range data types
+double>float>long>int>short(char)>byte 
+Compiler will not do it Implicitly because of possible lossy connection
+Explicit conversion -> progammer ->Typecast Operators
+Syntax: Smaller primitive datatype var=(smaller datatype) larger datatype var;
+eg: int i=150;
+    byte b=(byte) i;
+    Output: -106;
+    Even the byte is out of range, it keeps going in loop in a range from -128 to 127
+
+Scanner class:
+    Steps:
+        -> Import java.util.Scanner;
+        -> Declare Scanner Class Object;
+        -> Can declare in class block as well as Method block
+    Syntax:
+    Scanner Obj_Ref_name=new Scanner(System.in)
+    In bulit Methods of Scanner Class:
+    nextByte(), nextShort(), nextInt(), nextLong(), nextFloat(), nextDouble(), nextBoolean(),
+    next().charAt(0), next(), nextLine()
+    ->syntax:datatype var=Scanner obj.InBuild method
+    To stop resource leak(its just a warning which happens when we declare scanner in method block), we need to obj.close()
