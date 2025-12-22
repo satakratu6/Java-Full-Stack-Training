@@ -170,3 +170,32 @@ Scanner class:
     next().charAt(0), next(), nextLine()
     ->syntax:datatype var=Scanner obj.InBuild method
     To stop resource leak(its just a warning which happens when we declare scanner in method block), we need to obj.close()
+
+Control Statements
+Three Types:
+1)Decision Making statement	2)Looping Statement	3)Jumping Statement
+i)if                        i)do while->exit    i)break
+ii)if else                  ii)while->entry     ii)continue
+iii)if else ladder          iii)for->entry      iii)return
+iv)switch                   iv)foreach
+v)Nested if                 v)nested loop
+
+boolean, float, double, long -> These four values should not be used in case values according to industry standards
+
+22nd Decemeber Assignment questions:
+1. Online cab booking validation
+A cab can be booked only if the driver is available, the user location is serviceable, and payment mode is selected
+
+2. Employee Attendance System
+An employee is marked:
+"Present" if working hours more than 8
+"Half-Day" if working hours between 4 and 8
+"Abset" if working hours is less than 4
+Question: Write java decision logic to display Attendance status.
+
+3. Bank Account Status Check
+An account is:
+"Active" if balance more than or equals minimum balance"
+"Low Balance" if balance is less than minimum balance
+"Frozen" if the account is flagged
+Question:Write the decision-making logic to determine account status
