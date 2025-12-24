@@ -16,5 +16,6 @@ public class Q3 {
         } else{
             System.out.println("Frozen");
         }
+        sc.close();
     }
 }

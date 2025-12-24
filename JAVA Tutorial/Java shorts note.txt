@@ -199,3 +199,140 @@ An account is:
 "Low Balance" if balance is less than minimum balance
 "Frozen" if the account is flagged
 Question:Write the decision-making logic to determine account status
+
+4. Online Course access
+A student can access a course if the course is paid for or the student has a scholarship, and the course is not expired
+Question: Design the java decision logic
+
+5. Railway Ticket Confirmation
+A ticket is:
+Confirmed if seats are available
+Waitlisted if seats are full but RAC is available
+Canncelled otherwise
+Question: Frame decision-making logic in java
+
+6. Shopping cart validation
+Checkout is allowed only if the cart is not empty and delivery address is valid.
+Question: Write the java logic using decision statements
+
+7. Company Bonus Eligibility
+An employee gets a bonus if experience more than or equal 5 years and performance rating more than or equal 4
+Question: Write the decision making logic
+
+8. Exam result classification
+A student:
+Passes if marks more than or equals 40
+Fails otherwise
+Additionaly:
+Grade A if marks more than or equals 80
+Grade B if marks between 60 and 79
+Question: Design java logic using nested decision statements
+
+Switch-case based questions 
+9
+1.Calculator
+Based on user choicr:
+1- Additionaly
+2-Subhtraction
+3-Multplication
+4-Division
+Question: Write a java program using switch-case to perform the opeation
+
+10
+2.Day based work schedule
+Based on day number (1-7), print:
+weekday,weekend
+
+11
+3.ATM Operation Selection
+User selects:
+1 - Withdraw
+2 - Deposit
+3 - Balance Enquiry
+4 - Exit
+
+12
+4. Movie rating system
+based on rating:
+1  - Poor
+2 - Average
+3 - Good
+4 - Excellent
+
+13
+5. Grade Evaluation
+based on grade character
+A, B, C, D, F
+use switch case to display performance remarks
+
+14.
+6.Online Food Ordering Menu
+User selects cuisine type:
+1 - south indian
+2 - north indian
+3 - chinesse
+4 - italian
+question : write switch case logic to display menu items
+
+
+23rd December Assignment questions:
+1) A shop will give discount of 10% if the cost of purchased quantity is more than 1000.
+Based on quantity.
+Suppose one unit will cost 100.
+Judge and print total cost of user
+2. Enter age, Gender(M or F) and then using following rules to print their place of service.
+    If employee is female, then she will work only in urban areas
+    If employee is male and age is b/w 20 to 40 then he may work in anywhere
+    if employee is male amd age is in between 40 to 60 then he will work in urban areas only
+    and any other input of age should print "ERROR"
+3. Leap years
+Any year is input by the user. Write a program to determine whethere the year is a leap year or not.
+Leap years are any year that can be evenly divided 4. A year that is evenly divisible by 100 is a leap year only if it also
+evenly divisible by 400;
+
+4. Write a program to calculate the monthly telephone bills as per the following rule:
+Minimum rs 200 for upto 100 calls
+Plus rs. 0.60 per call for next 50 calls
+plus rs 0.50 per call for next 50 calls
+plus rs 0.40 per call for any call beyond 200 calls
+
+
+Looping Statement:
+Initilization: starting value(Dynamic), end(static)
+condition: (<,<=), (>,>=)
+operation:
+    (<,<=) forward -> Increment
+    (>,>=) backward -> decrement
+
+    do{
+        sout("Hi")
+        isFlag=false;
+    } while(isFlag)
+    do{
+        Sout("Hello");
+        sysem.exit(0);
+    } while(isFlag)
+do while vs while
+in do while, even the condition is false, it will execute at least once....
+
+
+int i=1;
+do{
+    sout(i)
+    i++;
+} while(i<=3); 
+Iteration:
+I-1: sout(i);->i++(i=1+1)->2<=3-> true
+I-2: sout(i)->i++(i=2+1)->3<=3->true
+I-3:sout(i)->i++(i=3+1)->4<=3->false
+i = 1,2,3,4
+output: 1
+        2
+        3
+
+Methods: Block of memory
+Syntax: Access_Modifier Modifiier return_type method_name(Formal args)
+
+Method Terminology:
+i)Method Signature          ii)Method Declaration                   iii)Method Declaration
+method_name(Formal args)    Access_Modifier Modifiier return_type   Method Declaration and Method Block(Implementation/Body)
