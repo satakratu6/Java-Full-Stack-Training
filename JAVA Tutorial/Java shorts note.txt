@@ -334,5 +334,147 @@ Methods: Block of memory
 Syntax: Access_Modifier Modifiier return_type method_name(Formal args)
 
 Method Terminology:
-i)Method Signature          ii)Method Declaration                   iii)Method Declaration
+i)Method Signature          ii)Method Declaration                   iii)Method Definition
 method_name(Formal args)    Access_Modifier Modifiier return_type   Method Declaration and Method Block(Implementation/Body)
+
+getter() -> is used to retrieve data and address of private data
+
+bean class -> all the data members should be private, user defined constructor shouldn't be there, getter and setter should be public
+setter() -> update or modifying
+Syntax: [AM] void setValue(datatype - var/className obj) {
+this.privateDatamember=local var;
+}
+
+POJO 
+
+Has A : Relationship between two objects
+
+Typecasting:
+non primitive typecasting:
+Upcasting: converting subclass to parent class 
+benefits: To achieve abstraction, collections framework
+class Alpha{
+int x=100;
+pvm1(){
+sopln("Alpha class");
+}
+}
+class Beta{
+int b=200;
+bvm2(){
+s.o.pln("beta class);
+}}
+
+class Main{
+psvm(String[] args){
+Alpha a1=new Beta();
+s.o.pln(a1.x);
+s.o.pln(a1.b) //CTE
+a1.m1();
+a1.m2(); //CTE
+
+downcasting:
+1) B b1=new A() -> Address larger, so CTE
+2) B b1=(B) new A() ->CTS, RTEException
+3) B B1=(b) a1;
+#By using instanceof op we need to check whether the class upcasted or not
+		|
+		->Keyword
+
+
+Prority for class:
+->interface
+-> abstract class
+-> class
+-> final class
+
+Import libraries:
+import java long io util sql auto
+
+lang-> (by deafault present in every classes)
+->object
+->System
+-> String class
+-> Buffer builder
+-> Exception
+-> Throwable
+-> Thread
+-> Runnable
+
+io->
+-> file
+->input Stream
+-> output stream
+-> file input stream
+-> file output stream
+-> Object input
+-> Object output
+
+util->
+-> collection
+-> collections
+-> Scanner
+-> Arrays
+-> List
+-> Set
+-> map
+
+sql->
+-> driver
+-> driver manager
+-> connection
+-> statement
+-> Prepared statement
+-> callable statement
+-> result statement
+
+user file access:
+-> import packagename * -> access all files
+-> import packagename filename
+-> package.file obj = new Package.file()
+
+singleton class
+#private constructors is possible
+eg:
+class A{
+private A(){
+}
+//helper method
+static public A m1(){
+A a=new A();
+return a;
+}
+}
+Main{
+psvm(S[] args){
+s.o.pln(A.m1());
+or A a=A.m1();
+
+#constructors -> default possible
+#initializers ->defaults not possible
+#class -> protected not possible
+
+object class-> it is present in java.lang package. by default lang package is imported. Object class is known as supermost class. 11 non
+static methods is there ->
+-> 11 non static methods=>
+-> toString()->String->public -> is used to access the current class attributes
+-> equals (Object o) -> Boolean -> public-> is used to compare the address of the values of variables
+-> hashCode () -> int ->public
+-> getClass() -> className -> public
+-> clone() -> Object -> public
+-> finalize() -> void -> protected
+multithreading / interrepted exception
+-> notify() -> v void -> public (it is a final method)
+-> notifyAll() -> void -> public (it's also final)
+-> wait() -> void -> public
+-> wait(long) -> void -> public
+-> wait (int i, long t) -> void -> public
+
+String class ->
+-> lang package
+->immutable class
+-> is a public final class
+-> concat(), equals(), trim(), length(), charAt(0), split(), toUpperCase(), toLowerCase(), substring(s), substring(s,e),
+endswith(), startswith(), replace(), indexOf(), logofIndexOf(), toString(), hashCode(),
+-> has 9 constructors
+	-> String(), String(literals), String (String s), String(char[] ch), String(byte[] b), String (StringBuffer sb), String(StringBuilde sb)
