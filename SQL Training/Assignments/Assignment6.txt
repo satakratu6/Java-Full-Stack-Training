@@ -1,0 +1,294 @@
+SQL> 
+SQL> -- Q1) WAQTD NUMBER OF EMPLOYEES WORKING IN EACH DEPARTMENT EXCEPT PRESIDENT
+SQL> 
+SQL> SELECT COUNT(*), JOB FROM EMP GROUP BY JOB WHERE JOB NOT LIKE "PRESIDENT";
+SELECT COUNT(*), JOB FROM EMP GROUP BY JOB WHERE JOB NOT LIKE "PRESIDENT"
+                                           *
+ERROR at line 1:
+ORA-00933: SQL command not properly ended 
+
+
+SQL> SELECT COUNT(*), JOB FROM EMP GROUP BY JOB HAVING JOB NOT LIKE "PRESIDENT";
+SELECT COUNT(*), JOB FROM EMP GROUP BY JOB HAVING JOB NOT LIKE "PRESIDENT"
+                                                               *
+ERROR at line 1:
+ORA-00904: "PRESIDENT": invalid identifier 
+
+
+SQL> SELECT COUNT(*), JOB FROM EMP GROUP BY JOB HAVING JOB NOT LIKE 'PRESIDENT';
+
+  COUNT(*) JOB                                                                  
+---------- ---------                                                            
+         4 CLERK                                                                
+         4 SALESMAN                                                             
+         3 MANAGER                                                              
+         2 ANALYST                                                              
+
+SQL> 
+SQL> -- Q2) WAQTD TOTAL SALARY NEEDED TO PAY ALL THE EMPLOYEES IN EACH JOB
+SQL> 
+SQL> SELECT SUM(SAL), JOB FROM EMP GROUP BY JOB;
+
+  SUM(SAL) JOB                                                                  
+---------- ---------                                                            
+      4150 CLERK                                                                
+      5600 SALESMAN                                                             
+      5000 PRESIDENT                                                            
+      8275 MANAGER                                                              
+      6000 ANALYST                                                              
+
+SQL> 
+SQL> --Q3) WAQTD NUMBER OF EMPLOYEES WORKING AS MANAGER IN EACH DEPARTMENT
+SQL> 
+SQL> SELECT COUNT(*), JOB FROM EMP GROUP BY JOB HAVING JOB LIKE 'MANAGER';
+
+  COUNT(*) JOB                                                                  
+---------- ---------                                                            
+         3 MANAGER                                                              
+
+SQL> SELECT DEPTNO, COUNT(*) FROM EMP WHERE JOB='MANAGER' GROUP BY DEPTNO;
+
+    DEPTNO   COUNT(*)                                                           
+---------- ----------                                                           
+        30          1                                                           
+        20          1                                                           
+        10          1                                                           
+
+SQL> 
+SQL> --Q4) WAQTD AVG SALARY NEEDED TO PAY ALL THE EMPLOYEES IN EACH DEPARTMENT EXCLUDING THE EMPLOYEES OF DEPTNO 20;
+SQL> 
+SQL> SELECT DEPTNO, AVG(SAL) FROM EMP GROUP BY DEPTNO HAVING DEPTNO NOT LIKE 20;
+
+    DEPTNO   AVG(SAL)                                                           
+---------- ----------                                                           
+        30 1566.66667                                                           
+        10 2916.66667                                                           
+
+SQL> SELECT DEPTNO, AVG(SAL) FROM EMP GROUP BY DEPTNO HAVING DEPTNO <> 20;
+
+    DEPTNO   AVG(SAL)                                                           
+---------- ----------                                                           
+        30 1566.66667                                                           
+        10 2916.66667                                                           
+
+SQL> SELECT DEPTNO, AVG(SAL) FROM EMP WHERE DEPTNO <> 20 GROUP BY DEPTNO;
+
+    DEPTNO   AVG(SAL)                                                           
+---------- ----------                                                           
+        30 1566.66667                                                           
+        10 2916.66667                                                           
+
+SQL> 
+SQL> -- WAQTD NUMBER OF EMPLOYEES HAVING CHARACTER 'A' IN THEIR NAMES IN EACH JOB;
+SQL> 
+SQL> SELECT COUNT(*) FROM EMP WHERE ENAME='%A%' GROUP BY JOB;
+
+no rows selected
+
+SQL> SELECT JOB, COUNT(*) FROM EMP WHERE ENAME LIKE'%A%' GROUP BY JOB;
+
+JOB         COUNT(*)                                                            
+--------- ----------                                                            
+SALESMAN           3                                                            
+CLERK              2                                                            
+MANAGER            2                                                            
+
+SQL> 
+SQL> -- Q6) WAQTD NUMBER OF EMPLOYEES AND AVG SALARY NEEDED TO PAY THE EMPLOYEES WHO SALARY IN GREATER THAN 2000 IN EACH DEPT
+SQL> 
+SQL> 
+SQL> 
+SQL> -- WAQTD NAMES, JOB, AND SAL OF EMP'S IS EACH JOB WHERE THE MAX SALARY IS GREATER THAN 2500;
+SQL> SELECT ENAME, JOB, SAL FROM EMP GROUP BY JOB HAVING MAX(SAL)>2500;
+SELECT ENAME, JOB, SAL FROM EMP GROUP BY JOB HAVING MAX(SAL)>2500
+       *
+ERROR at line 1:
+ORA-00979: not a GROUP BY expression 
+
+
+SQL> SELECT ENAME, JOB, SAL FROM EMP GROUP BY ENAME,JOB, SAL HAVING MAX(SAL)>2500;
+
+ENAME      JOB              SAL                                                 
+---------- --------- ----------                                                 
+FORD       ANALYST         3000                                                 
+JONES      MANAGER         2975                                                 
+SCOTT      ANALYST         3000                                                 
+KING       PRESIDENT       5000                                                 
+BLAKE      MANAGER         2850                                                 
+
+SQL> -- Q6)
+SQL> select deptno,
+  2  avg(sal) as AVG_SALARY,
+  3  count(*) as num_of_employees from emp
+  4  group by deptno;
+
+    DEPTNO AVG_SALARY NUM_OF_EMPLOYEES                                          
+---------- ---------- ----------------                                          
+        30 1566.66667                6                                          
+        20       2175                5                                          
+        10 2916.66667                3                                          
+
+SQL> select deptno,
+  2  avg(sal) as AVG_SALARY,
+  3  count(*) as num_of_employees from emp
+  4  where sal >2000
+  5  group by deptno;
+
+    DEPTNO AVG_SALARY NUM_OF_EMPLOYEES                                          
+---------- ---------- ----------------                                          
+        30       2850                1                                          
+        20 2991.66667                3                                          
+        10       3725                2                                          
+
+SQL> 
+SQL> --Q7) WAQDTD TOTAL SALARY NEEDED TO PAY AND NUMBER OF SALESMANS IN EACH DEPT.
+SQL> 
+SQL> select deptno, sum(sal) from emp where job in 'SALESMAN' group by dept;
+select deptno, sum(sal) from emp where job in 'SALESMAN' group by dept
+                                                                  *
+ERROR at line 1:
+ORA-00904: "DEPT": invalid identifier 
+
+
+SQL> select deptno, sum(sal) from emp where job in 'SALESMAN' group by deptno;
+
+    DEPTNO   SUM(SAL)                                                           
+---------- ----------                                                           
+        30       5600                                                           
+
+SQL> select * from emp;
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM      
+---------- ---------- --------- ---------- --------- ---------- ----------      
+    DEPTNO                                                                      
+----------                                                                      
+      7369 SMITH      CLERK           7902 17-DEC-80        800                 
+        20                                                                      
+                                                                                
+      7499 ALLEN      SALESMAN        7698 20-FEB-81       1600        300      
+        30                                                                      
+                                                                                
+      7521 WARD       SALESMAN        7698 22-FEB-81       1250        500      
+        30                                                                      
+                                                                                
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM      
+---------- ---------- --------- ---------- --------- ---------- ----------      
+    DEPTNO                                                                      
+----------                                                                      
+      7566 JONES      MANAGER         7839 02-APR-81       2975                 
+        20                                                                      
+                                                                                
+      7654 MARTIN     SALESMAN        7698 28-SEP-81       1250       1400      
+        30                                                                      
+                                                                                
+      7698 BLAKE      MANAGER         7839 01-MAY-81       2850                 
+        30                                                                      
+                                                                                
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM      
+---------- ---------- --------- ---------- --------- ---------- ----------      
+    DEPTNO                                                                      
+----------                                                                      
+      7782 CLARK      MANAGER         7839 09-JUN-81       2450                 
+        10                                                                      
+                                                                                
+      7788 SCOTT      ANALYST         7566 19-APR-87       3000                 
+        20                                                                      
+                                                                                
+      7839 KING       PRESIDENT            17-NOV-81       5000                 
+        10                                                                      
+                                                                                
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM      
+---------- ---------- --------- ---------- --------- ---------- ----------      
+    DEPTNO                                                                      
+----------                                                                      
+      7844 TURNER     SALESMAN        7698 08-SEP-81       1500          0      
+        30                                                                      
+                                                                                
+      7876 ADAMS      CLERK           7788 23-MAY-87       1100                 
+        20                                                                      
+                                                                                
+      7900 JAMES      CLERK           7698 03-DEC-81        950                 
+        30                                                                      
+                                                                                
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM      
+---------- ---------- --------- ---------- --------- ---------- ----------      
+    DEPTNO                                                                      
+----------                                                                      
+      7902 FORD       ANALYST         7566 03-DEC-81       3000                 
+        20                                                                      
+                                                                                
+      7934 MILLER     CLERK           7782 23-JAN-82       1300                 
+        10                                                                      
+                                                                                
+
+14 rows selected.
+
+SQL> --Q7) WAQDTD TOTAL SALARY NEEDED TO PAY AND NUMBER OF SALESMANS IN EACH DEPT.
+SQL> 
+SQL> select deptno, sum(sal), count(*) from emp where job='SALESMAN' group by deptno;
+
+    DEPTNO   SUM(SAL)   COUNT(*)                                                
+---------- ---------- ----------                                                
+        30       5600          4                                                
+
+SQL> 
+SQL> 
+SQL> -- Q8) WAQTD NUMBER OF EMPLOYEES WITH THEIR MAXIMUM SALARIES IN EACH JOB.
+SQL> 
+SQL> select job, count(*), max(sal) from emp group by job;
+
+JOB         COUNT(*)   MAX(SAL)                                                 
+--------- ---------- ----------                                                 
+CLERK              4       1300                                                 
+SALESMAN           4       1600                                                 
+PRESIDENT          1       5000                                                 
+MANAGER            3       2975                                                 
+ANALYST            2       3000                                                 
+
+SQL> 
+SQL> 
+SQL> -- Q9) WAQTD MAXIMUM SALARIES GIVEN TO AN EMPLOYEE WORKING IN EACH DEPT.
+SQL> 
+SQL> select deptno, max(sal) from emp group by deptno;
+
+    DEPTNO   MAX(SAL)                                                           
+---------- ----------                                                           
+        30       2850                                                           
+        20       3000                                                           
+        10       5000                                                           
+
+SQL> 
+SQL> -Q10) WAQTD NUMBER OF TIMES THE SALARIES PRESENT IN EMPLOYEE TABLE.
+SP2-0734: unknown command beginning "-Q10) WAQT..." - rest of line ignored.
+SQL> 
+SQL> -- Q10) WAQTD NUMBER OF TIMES THE SALARIES PRESENT IN EMPLOYEE TABLE.
+SQL> 
+SQL> select sal, count(*) from emp group by sal;
+
+       SAL   COUNT(*)                                                           
+---------- ----------                                                           
+      2450          1                                                           
+      5000          1                                                           
+      1300          1                                                           
+      1250          2                                                           
+      2850          1                                                           
+      2975          1                                                           
+      1100          1                                                           
+      3000          2                                                           
+       800          1                                                           
+      1600          1                                                           
+      1500          1                                                           
+
+       SAL   COUNT(*)                                                           
+---------- ----------                                                           
+       950          1                                                           
+
+12 rows selected.
+
+SQL> set lines 1000
+SQL> set pages 1000
+SQL> spool off;
