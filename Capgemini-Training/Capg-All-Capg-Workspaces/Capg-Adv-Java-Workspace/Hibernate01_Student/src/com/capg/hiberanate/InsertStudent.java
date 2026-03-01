@@ -35,7 +35,7 @@ public class InsertStudent {
 			s2.setEmail("piyush@gmail.com");
 			s2.setMobile(88888L);
 			session.save(s2);
-			
+		
 			//7. Commit Transaction
 			tx.commit();
 			System.out.println("Date inserted succesfully");
