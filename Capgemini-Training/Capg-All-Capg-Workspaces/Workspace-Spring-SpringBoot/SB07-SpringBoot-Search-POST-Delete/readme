@@ -1,0 +1,19 @@
+Get:
+http://localhost:9000/capgtopics
+
+Get
+http://localhost:9000/capgtopics/SPRING
+
+post
+
+http://localhost:9000/capgtopics
+
+ {
+        "name": "UI Technologies",
+        "description": "ReactJS",
+        "id": "UI"
+    }
+    
+  Delete :
+  
+ http://localhost:9000/capgtopics/ANGULAR
