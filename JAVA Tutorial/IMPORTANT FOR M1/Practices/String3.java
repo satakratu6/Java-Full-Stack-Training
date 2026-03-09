@@ -1,3 +1,30 @@
+//Possible Problem Statement
+//
+//Write a Java function transform(String str) that processes a sentence according to the following rules.
+//
+//Conditions
+//
+//The input string must contain only alphabetic characters and spaces.
+//
+//If any character other than a letter appears, return null.
+//
+//Split the string into words using spaces.
+//
+//If the number of words is odd:
+//
+//Reverse each word individually.
+//
+//Keep the word order the same.
+//
+//If the number of words is even:
+//
+//Reverse the order of words.
+//
+//Do not reverse the characters inside each word.
+//
+//Return the transformed string.
+
+
 import java.util.*;
 
 public class String3 {
