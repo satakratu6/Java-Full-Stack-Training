@@ -1,3 +1,47 @@
+//Problem:
+//Given a string str, perform the following operations and print the resulting string.
+//
+//Step 1 — Split the string
+//
+//Divide the string into two halves:
+//
+//left → first half
+//
+//right → second half
+//
+//If the length is odd, the extra character goes to the right half.
+//
+//Step 2 — Reverse both halves
+//
+//Reverse the characters of both halves separately.
+//
+//Example:
+//
+//Input:  abcdef
+//left  = abc
+//right = def
+//
+//leftRev  = cba
+//rightRev = fed
+//Step 3 — Interleave the reversed halves
+//
+//Create a new string by alternating characters from the reversed halves.
+//
+//Example:
+//
+//cba
+//fed
+//
+//Interleave → cfbead
+//Step 4 — Insert the first character at prime positions
+//
+//Let x be the first character of the original string.
+//
+//Insert x into the new string at prime positions (2, 3, 5, 7, …).
+//
+//Prime numbers are numbers greater than 1 divisible only by 1 and itself.
+
+
 import java.util.Scanner;
 
 public class String2 {
