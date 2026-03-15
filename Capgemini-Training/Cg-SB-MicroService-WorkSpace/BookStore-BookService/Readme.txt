@@ -38,3 +38,6 @@ Put:  http://localhost:9082/api/books
 }
 
 Delete: http://localhost:9082/api/books/3
+
+
+for api gateway just replace 9080 with 9082

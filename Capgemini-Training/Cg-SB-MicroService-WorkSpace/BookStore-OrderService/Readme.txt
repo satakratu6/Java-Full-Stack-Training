@@ -7,3 +7,5 @@ JSON: { "bookId":1,
 Get: http://localhost:9083/api/orders
 
 Get: http://localhost:9083/api/orders/1
+
+for api gateway just replace 9080 with 9083
