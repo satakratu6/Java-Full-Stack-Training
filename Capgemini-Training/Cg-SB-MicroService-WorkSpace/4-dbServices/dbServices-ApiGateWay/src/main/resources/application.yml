@@ -1,0 +1,18 @@
+server:
+  port: 9080
+
+spring:
+  application:
+    name: API-GATEWAY
+  cloud:
+    gateway:
+      routes:
+        - id: product-service
+          uri: lb://DBSERVICES-PRODUCTSERVICE
+          predicates:
+            - Path=/products/**
+
+        - id: order-service
+          uri: lb://DBSERVICES-ORDERSERVICE
+          predicates:
+            - Path=/orders/**
