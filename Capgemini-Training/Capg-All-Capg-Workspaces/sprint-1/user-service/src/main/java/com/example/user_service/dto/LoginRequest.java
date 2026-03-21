@@ -12,6 +12,8 @@ public class LoginRequest {
     @NotBlank
     private String password;
 
+    public LoginRequest() {}
+
 	public LoginRequest(@Email @NotBlank String email, @NotBlank String password) {
 		super();
 		this.email = email;
